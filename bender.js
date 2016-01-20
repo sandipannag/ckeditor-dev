@@ -42,7 +42,7 @@ var config = {
 	},
 
 	plugins: [
-		'benderjs-jasmine', 'benderjs-coverage', 'benderjs-mocha', 'benderjs-chai', 'benderjs-sinon'
+		'benderjs-jasmine'
 	],
 
 	tests: {
