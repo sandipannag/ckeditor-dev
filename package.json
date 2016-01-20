@@ -6,7 +6,7 @@
 		"benderjs-coverage": "^0.2.1",
 		"benderjs": "git://github.com/benderjs/benderjs.git",
 		"benderjs-cli": "~0.1.1",
-		"benderjs-jasmine": "~0.2.3"
+		"benderjs-jasmine": "~0.2.3",
 		"benderjs-jquery": "^0.3.0",
 		"benderjs-sinon": "^0.3.1",
 		"benderjs-yui": "^0.3.2",
@@ -24,7 +24,7 @@
 		"cksource-samples-framework": "^1.0.1"
 	},
 	"scripts": {
-		"test": "bender run -l && bender run"
+		"test": "bender run"
 	},
 	"author": "CKSource (http://cksource.com/)",
 	"license": "For licensing, see LICENSE.md or http://ckeditor.com/license.",
