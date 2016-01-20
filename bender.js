@@ -13,11 +13,8 @@ var config = {
 		}
 	},
 
-	framework: 'yui',
-
-	// secure: true,
-	privateKey: 'tests/_benderjs/ssl/key.pem',
-	certificate: 'tests/_benderjs/ssl/cert.pem',
+	framework: 'jasmine',
+	startBrowser: 'firefox',
 
 	coverage: {
 		paths: [
@@ -34,13 +31,7 @@ var config = {
 		}
 	},
 
-	plugins: [
-		'benderjs-coverage',
-		'benderjs-yui',
-		'benderjs-sinon',
-		'benderjs-jquery',
-		'tests/_benderjs/ckeditor'
-	],
+	plugins: [ 'benderjs-jasmine' ],
 
 	tests: {
 		'Adapters': {
@@ -101,6 +92,8 @@ var config = {
 			]
 		}
 	}
+	
+	testTimeout: 10 * 1000
 };
 
 module.exports = config;
