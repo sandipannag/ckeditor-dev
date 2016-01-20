@@ -24,6 +24,7 @@
 		"cksource-samples-framework": "^1.0.1"
 	},
 	"scripts": {
+		"test": "bender init",
 		"test": "bender run"
 	},
 	"author": "CKSource (http://cksource.com/)",
