@@ -22,6 +22,7 @@
 		"less": "^2.5.0",
 		"shelljs": "^0",
 		"cksource-samples-framework": "^1.0.1"
+		
 	},
 	"scripts": {
 		"test": ["bender init", "bender run"]
