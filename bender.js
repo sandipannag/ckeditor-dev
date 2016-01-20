@@ -1,9 +1,26 @@
-/* jshint browser: false, node: true */
-
+/**
+ * Bender configuration file
+ *
+ * @param {Object}   applications       Applications used in current project
+ * @param {Array}    browsers           List of browsers used for testing
+ * @param {Number}   captureTimeout     Timeout before which a launched browser should connect to the server
+ * @param {Boolean}  debug              Enable debug logs
+ * @param {Number}   defermentTimeout   Timeout before which a plugin should finish initializing on a test page
+ * @param {String}   framework          Default framework used for the tests
+ * @param {String}   hostname           Host on which the HTTP and WebSockets servers will listen
+ * @param {Array}    manualBrowsers     List of browsers accepting manual tests
+ * @param {Number}   manualTestTimeout  Timeout after which a manual test is marked as failed
+ * @param {Array}    plugins            List of Bender plugins to load at startup (Required)
+ * @param {Number}   port               Port on which the HTTP and WebSockets servers will listen
+ * @param {Number}   slowAvgThreshold   Average test case duration threshold above which a test is marked as slow
+ * @param {Number}   slowThreshold      Test duration threshold above which a test is marked as slow
+ * @param {String}   startBrowser       Name of a browser to start when executing bender run command
+ * @param {Number}   testRetries        Number of retries to perform before marking a test as failed
+ * @param {Object}   tests              Test groups for the project (Required)
+ * @param {Number}   testTimeout        Timeout after which a test will be fetched again
+ */
 'use strict';
-
 var config = {
-
 	applications: {
 		ckeditor: {
 			path: '.',
@@ -15,47 +32,20 @@ var config = {
 
 	framework: 'jasmine',
 	startBrowser: 'firefox',
-
 	coverage: {
 		paths: [
-			'adapters/**/*',
-			'core/**/*',
-			'dev/**/*',
-			'lang/**/*',
-			'plugins/**/*',
-			'samples/**/*',
-			'*.js'
+			'plugins/**/*'
 		],
 		options: {
 			checkTrackerVar: true
 		}
 	},
 
-	plugins: [ 'benderjs-jasmine' ],
+	plugins: [
+		'benderjs-jasmine', 'benderjs-coverage', 'benderjs-mocha', 'benderjs-chai', 'benderjs-sinon'
+	],
 
 	tests: {
-		'Adapters': {
-			applications: [ 'ckeditor' ],
-			basePath: 'tests/',
-			paths: [
-				'adapters/**',
-				'!**/_*/**'
-			],
-			// Latest of the old API (1.8.3)
-			// Latest of the 1.* branch
-			// Latest of the 2.* branch
-			jQuery: [ '1.8.3', '1.11.1', '2.1.1' ]
-		},
-
-		'Core': {
-			applications: [ 'ckeditor' ],
-			basePath: 'tests/',
-			paths: [
-				'core/**',
-				'!**/_*/**'
-			]
-		},
-
 		'Plugins': {
 			applications: [ 'ckeditor' ],
 			basePath: 'tests/',
@@ -63,37 +53,8 @@ var config = {
 				'plugins/**',
 				'!**/_*/**'
 			]
-		},
-
-		'External Plugins': {
-			applications: [ 'ckeditor' ],
-			basePath: 'plugins/',
-			paths: [
-				'*/tests/**',
-				'!**/_*/**'
-			]
-		},
-
-		'Tickets': {
-			applications: [ 'ckeditor' ],
-			basePath: 'tests/',
-			paths: [
-				'tickets/**',
-				'!**/_*/**'
-			]
-		},
-
-		'Utils': {
-			applications: [ 'ckeditor' ],
-			basePath: 'tests/',
-			paths: [
-				'utils/**',
-				'!**/_*/**'
-			]
 		}
 	}
-	
-	testTimeout: 10 * 1000
 };
 
 module.exports = config;
