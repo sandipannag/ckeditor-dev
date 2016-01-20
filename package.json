@@ -1,70 +1,37 @@
 {
-	"name": "benderjs",
-	"version": "0.4.1",
-	"description": "The anti-human approach to JavaScript testing",
-	"keywords": [
-		"test",
-		"unit",
-		"remote",
-		"testing",
-		"bender",
-		"benderjs"
-	],
-	"homepage": "http://benderjs.com/",
+	"name": "ckeditor-dev",
+	"version": "4.5.7",
+	"description": "The development version of CKEditor - JavaScript WYSIWYG web text editor.",
+	"devDependencies": {
+		"benderjs-coverage": "^0.2.1",
+		"benderjs": "git://github.com/benderjs/benderjs.git",
+		"benderjs-cli": "~0.1.1",
+		"benderjs-jasmine": "~0.2.3"
+		"benderjs-jquery": "^0.3.0",
+		"benderjs-sinon": "^0.3.1",
+		"benderjs-yui": "^0.3.2",
+		"grunt": "^0",
+		"grunt-contrib-imagemin": "^0",
+		"grunt-jscs": "^2.0.0",
+		"grunt-contrib-jshint": "^0",
+		"grunt-contrib-less": "^1.0.0",
+		"grunt-contrib-watch": "^0.6.1",
+		"grunt-contrib-concat": "^0.5.1",
+		"grunt-jsduck": "^1.0.1",
+		"grunt-githooks": "^0.3.1",
+		"less": "^2.5.0",
+		"shelljs": "^0",
+		"cksource-samples-framework": "^1.0.1"
+	},
 	"scripts": {
 		"test": "bender run -l && bender run"
 	},
+	"author": "CKSource (http://cksource.com/)",
+	"license": "For licensing, see LICENSE.md or http://ckeditor.com/license.",
+	"bugs": "http://dev.ckeditor.com",
+	"homepage": "http://ckeditor.com",
 	"repository": {
 		"type": "git",
-		"url": "http://github.com/benderjs/benderjs.git"
-	},
-	"bugs": {
-		"url": "https://github.com/benderjs/benderjs/issues"
-	},
-	"author": "CKSource (http://cksource.com/)",
-	"license": "MIT",
-	"dependencies": {
-		"bower": "^1.4.1",
-		"broadway": "^0.3.6",
-		"browser-launcher2": "~0.4.6",
-		"chalk": "^1.1.0",
-		"connect": "^2.30.2",
-		"dom-combiner": "^0.1.2",
-		"forever": "^0.15.1",
-		"gerard": "~0.2.0",
-		"graceful-fs": "^4.1.2",
-		"lodash": "^3.10.1",
-		"marked": "^0.3.5",
-		"mime": "^1.3.4",
-		"minimatch": "^2.0.10",
-		"ncp": "^2.0.0",
-		"nedb": "^1.1.3",
-		"node-uuid": "~1.4.1",
-		"osenv": "~0.1.0",
-		"request": "^2.60.0",
-		"send": "^0.13.0",
-		"socket.io": "^0.9.17",
-		"subcommander": "~0.1.3",
-		"tv4": "^1.2.3",
-		"useragent": "~2.1.4",
-		"utile": "^0.3.0",
-		"when": "^3.7.3",
-		"winston": "^1.0.1"
-	},
-	"devDependencies": {
-		"benderjs-coverage": "^0.2.1",
-		"benderjs-mocha": "^0.3.2",
-		"benderjs-sinon": "^0.2.3",
-		"chai": "^3.2.0",
-		"chai-as-promised": "^5.1.0",
-		"eventemitter2": "~0.4.14",
-		"istanbul": "~0.3.2",
-		"jscs": "^2.1.0",
-		"jsdoc": "^3.3.0-beta2",
-		"jshint": "^2.8.0",
-		"mocha": "^1.21.5",
-		"rewire": "^2.3.4",
-		"sinon": "^1.15.4",
-		"socket.io-client": "~0.9.17"
+		"url": "https://github.com/ckeditor/ckeditor-dev.git"
 	}
 }
