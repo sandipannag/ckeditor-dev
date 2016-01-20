@@ -5,6 +5,3 @@ sudo: true
 before_install:
   - npm install -g benderjs-cli
   - npm install phantomjs
-  
-before_script:
-  - bender init
