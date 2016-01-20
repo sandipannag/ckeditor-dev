@@ -1,7 +1,6 @@
 language: node_js
 node_js:
   - "4.0"
-sudo: true
 before_install:
-  - npm install -g benderjs-cli
+  - npm install -g benderjs
   - npm install phantomjs
