@@ -25,6 +25,7 @@
 	},
 	"scripts": {
 		"test": "bender run"
+		
 	},
 	"author": "CKSource (http://cksource.com/)",
 	"license": "For licensing, see LICENSE.md or http://ckeditor.com/license.",
